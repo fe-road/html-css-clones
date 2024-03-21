@@ -10,4 +10,4 @@ For practicing real world examples and get more confident with HTML and CSS.
 
 ## Pages Done (so far)
 
-* (in progress)
+* Google Home Page
