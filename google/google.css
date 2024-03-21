@@ -8,11 +8,13 @@
 body {
     margin: 0;
     color: var(--color-text);
+    font-family: arial, sans-serif;
 }
 
 .link {
     text-decoration: none;
     color: var(--color-link);
+    font-size: 13px;
 }
 
 .link:hover {
@@ -36,8 +38,50 @@ body {
 }
 
 .content {
+    display: flex;
     height: 100vh;
     width: 100vw;
+    max-width: 580px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content .search-input {
+    --color-border: #dfe1e5;
+
+    height: 46px;
+    width: 100%;
+    border-radius: 28px;
+    border: 1px solid var(--color-border);
+}
+
+.content .actions-container {
+    padding: 28px 0;
+}
+
+.content .actions-container button {
+    --color-background: #f8f9fa;
+    --color-border: var(--color-background);
+    --color-text: #3c4043;
+
+    height: 34px;
+    padding: 0 16px;
+    margin: 0 4px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.content .language-container {
+    --color-text: #474747;
+
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-text);
 }
 
 .content .language-container .link {
@@ -51,11 +95,40 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 94px;
-
+    min-height: 94px;
     background-color: var(--color-background-footer);
 }
 
-.footer section:first-child {
+.extra-info-section {
+    display: flex;
+    height: 47px;
+    padding: 0 30px;
+    font-size: 15px;
     border-bottom: 1px solid var(--color-divider);
+    align-items: center;
+}
+
+.links-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 46px;
+    padding: 0 20px;
+}
+
+.links-section .links-group {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+}
+
+.links-section .link {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .links-section {
+        justify-content: space-evenly;
+    }
 }
