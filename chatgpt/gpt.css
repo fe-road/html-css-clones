@@ -7,6 +7,7 @@
 
     --accent-color: rgb(103, 103, 103);
     --light-accent-color: rgb(249, 249, 249);
+    --border-color: rgb(227, 227, 227);
 }
 
 body {
@@ -68,7 +69,7 @@ body {
 }
 
 .links-section .icon-container.bordered-container {
-    border: 1px solid rgb(227, 227, 227);
+    border: 1px solid var(--border-color);
 }
 
 .links-section .icon-container.right-container {
@@ -146,4 +147,78 @@ body {
 .header-button:hover {
     background-color: var(--light-accent-color);
     cursor: pointer;
+}
+
+/** FOOTER **/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: var(--sidebar-width);
+    right: 0;
+}
+
+.inner-footer {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.suggestions-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.suggestion-item {
+    width: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.suggestion-item .suggestion-item-inner {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 100%;
+    padding: 16px 14px;
+    box-sizing: border-box;
+}
+
+.suggestion-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.suggestion-item p.title {
+    font-weight: 600;
+}
+
+.suggestion-item p.subline {
+    color: var(--accent-color);
+}
+
+.input-container {
+    position: relative;
+}
+
+.text-input {
+    width: 100%;
+    height: 54px;
+    padding: 14px 48px 14px 55px;
+    font-size: 16px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+.attachment-icon {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+}
+
+.send-icon {
+    position: absolute;
+    top: 14px;
+    right: 14px;
 }
