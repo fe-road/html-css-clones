@@ -130,6 +130,10 @@ body {
     padding: var(--header-vertical-padding) 12px;
 }
 
+.header svg.mobile-button {
+    display: none;    
+}
+
 .header-button {
     height: var(--header-height);
     padding: 8px 12px;
@@ -155,6 +159,7 @@ body {
     bottom: 0;
     left: var(--sidebar-width);
     right: 0;
+    padding: 0 24px;
 }
 
 .inner-footer {
@@ -221,4 +226,55 @@ body {
     position: absolute;
     top: 14px;
     right: 14px;
+}
+
+.footnote {
+    text-align: center;
+    font-size: 12px;
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 824px) {
+    .suggestion-item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-color);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .header svg.mobile-button {
+        display: block;
+    }
+
+    .suggestion-item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hide-on-small-screen {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .suggestion-item {
+        width: 100%;
+    }
 }
