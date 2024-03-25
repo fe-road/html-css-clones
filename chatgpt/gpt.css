@@ -1,6 +1,12 @@
 :root {
     --sidebar-width: 260px;
+    --header-height: 44px;
+    --header-vertical-padding: 8px;
+
     --spacing-sections-sidebar: 14px;
+
+    --accent-color: rgb(103, 103, 103);
+    --light-accent-color: rgb(249, 249, 249);
 }
 
 body {
@@ -8,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    color: rgb(13, 13, 13);
 }
 
 /** SIDEBAR **/
@@ -18,7 +25,7 @@ body {
     justify-content: space-between;
     height: 100vh;
     width: var(--sidebar-width);
-    background-color: rgb(249, 249, 249);
+    background-color: var(--light-accent-color);
 }
 
 .links-section {
@@ -33,7 +40,7 @@ body {
     align-items: center;
     border: none;
     border-radius: 12px;
-    background-color: rgb(249, 249, 249);
+    background-color: var(--light-accent-color);
     position: relative;
 }
 
@@ -83,7 +90,7 @@ body {
 
 .accent-text {
     font-size: 10px;
-    color: rgb(103, 103, 103);
+    color: var(--accent-color);
     display: block;
     text-align: left;
 }
@@ -93,11 +100,38 @@ body {
     width: calc(100% - var(--sidebar-width));
 }
 
+.main-container {
+    height: calc(100vh - var(--header-height) - 2 * var(--header-vertical-padding));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container .main-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--light-accent-color);
+}
+
+.main-container .headline {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
 /** HEADER **/
+.header {
+    height: var(--header-height);
+    padding: var(--header-vertical-padding) 12px;
+}
+
 .header-button {
-    height: 44px;
+    height: var(--header-height);
     padding: 8px 12px;
-    margin: 8px 12px;
     border: none;
     border-radius: 12px;
     background-color: white;
@@ -106,10 +140,10 @@ body {
 }
 
 .header-button .accent {
-    color: rgb(103, 103, 103);
+    color: var(--accent-color);
 }
 
 .header-button:hover {
-    background-color: rgb(249, 249, 249);
+    background-color: var(--light-accent-color);
     cursor: pointer;
 }
