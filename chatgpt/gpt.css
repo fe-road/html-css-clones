@@ -1,18 +1,23 @@
 :root {
+    --sidebar-width: 260px;
     --spacing-sections-sidebar: 14px;
 }
 
 body {
+    display: flex;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+/** SIDEBAR **/
 
 .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    width: 260px;
+    width: var(--sidebar-width);
     background-color: rgb(249, 249, 249);
 }
 
@@ -22,8 +27,46 @@ body {
     padding: 0 12px;
 }
 
-.links-section button {
+.links-section .sidebar-link {
     height: 40px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(249, 249, 249);
+    position: relative;
+}
+
+.links-section .sidebar-link:hover {
+    background-color: #ececec;
+    cursor: pointer;
+}
+
+.links-section .sidebar-link svg,
+.links-section .sidebar-link img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.7);
+}
+
+.links-section .icon-container {
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.links-section .icon-container.white-container {
+    background-color: white;
+}
+
+.links-section .icon-container.bordered-container {
+    border: 1px solid rgb(227, 227, 227);
+}
+
+.links-section .icon-container.right-container {
+    position: absolute;
+    right: 0;
 }
 
 .top-links-section {
@@ -32,4 +75,41 @@ body {
 
 .bottom-links-section {
     margin-bottom: var(--spacing-sections-sidebar);
+}
+
+.gpt-icon {
+    transform: scale(0.6);
+}
+
+.accent-text {
+    font-size: 10px;
+    color: rgb(103, 103, 103);
+    display: block;
+    text-align: left;
+}
+
+/** CONTENT **/
+.content-container {
+    width: calc(100% - var(--sidebar-width));
+}
+
+/** HEADER **/
+.header-button {
+    height: 44px;
+    padding: 8px 12px;
+    margin: 8px 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header-button .accent {
+    color: rgb(103, 103, 103);
+}
+
+.header-button:hover {
+    background-color: rgb(249, 249, 249);
+    cursor: pointer;
 }
